@@ -156,17 +156,8 @@ function setWallpaperLinux(){
   fi
 }
 function setWallpaperOSX(){
-  osascript -- - "$muzeiDir/WallPaper/$imageFile" <<'EOD'
-    on run(argv)
-      set theFile to item 1 of argv
-      tell application "System Events"
-        set theDesktops to a reference to every desktop
-        repeat with aDesktop in theDesktops
-          set the picture of aDesktop to theFile
-        end repeat
-      end tell
-      return "Set OSX desktop(s) to " & theFile
-   end
+    sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$muzeiDir/WallPaper/$imageFile'"
+    killall Dock
 EOD
 }
 case "$OSTYPE" in
