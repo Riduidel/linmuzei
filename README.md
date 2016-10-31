@@ -2,6 +2,7 @@
 
   ![Muzei](http://i.imgur.com/vEFoIpw.png)
 
+**MacOS Sierra, El Capitan, and Mavericks update to:**
 Port of [Muzei](https://github.com/romannurik/muzei/) to Bash.
 Fork of [Muzei-Bash] (https://github.com/Feminist-Software-Foundation/Muzei-Bash/).
 
